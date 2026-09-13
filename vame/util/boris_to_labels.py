@@ -100,10 +100,10 @@ def detect_boris_format(df):
     Returns ``'aggregated'``, ``'tabulated'`` or ``'binary'`` depending on the
     columns present in the DataFrame.
     """
-    if _find_col(df, _BEHAVIOR_COLS) is not None and _find_col(df, _START_COLS) is not None \\
+    if _find_col(df, _BEHAVIOR_COLS) is not None and _find_col(df, _START_COLS) is not None \
             and _find_col(df, _STOP_COLS) is not None:
         return 'aggregated'
-    if _find_col(df, _BEHAVIOR_COLS) is not None and _find_col(df, _TIME_COLS) is not None \\
+    if _find_col(df, _BEHAVIOR_COLS) is not None and _find_col(df, _TIME_COLS) is not None \
             and _find_col(df, _STATUS_COLS) is not None:
         return 'tabulated'
     if _find_col(df, _TIME_COLS) is not None or 'time' in [c.lower() for c in df.columns]:
