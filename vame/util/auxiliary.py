@@ -28,20 +28,20 @@ def create_config_template():
     Creates a template for config.yaml file. This specific order is preserved while saving as yaml file.
     """
     import ruamel.yaml
-    yaml_str = """\\
+    yaml_str = """\
 # Project configurations
     Project:
     model_name:
     n_cluster:
     pose_confidence: 
-    \\n
+    \n
 # Project path and videos
     project_path:
     video_sets:
-    \\n
+    \n
 # Data
     all_data:
-    \\n
+    \n
 # Creation of train set:
     egocentric_data: 
     robust:
@@ -51,7 +51,7 @@ def create_config_template():
     savgol_length:
     savgol_order:
     test_fraction:
-    \\n
+    \n
 # RNN model general hyperparameter:
     pretrained_model: 
     pretrained_weights: 
@@ -76,7 +76,7 @@ def create_config_template():
     #You are encouraged to read the torch.optim.ReduceLROnPlateau docs to understand the threshold to use.
     scheduler_threshold:
     softplus: 
-    \\n
+    \n
 # Segmentation:
     parameterization:
     hmm_trained: False
@@ -84,31 +84,31 @@ def create_config_template():
     individual_parameterization: 
     random_state_kmeans: 
     n_init_kmeans:
-    \\n
+    \n
 # Video writer:
     length_of_motif_video:
-    \\n
+    \n
 # UMAP parameter:
     min_dist:
     n_neighbors: 
     random_state: 
     num_points:
-    \\n
+    \n
 # ONLY CHANGE ANYTHING BELOW IF YOU ARE FAMILIAR WITH RNN MODELS
 # RNN encoder hyperparamter:
     hidden_size_layer_1:
     hidden_size_layer_2:
     dropout_encoder:
-    \\n
+    \n
 # RNN reconstruction hyperparameter:
     hidden_size_rec:
     dropout_rec:
     n_layers:
-    \\n
+    \n
 # RNN prediction hyperparamter:
     hidden_size_pred:
     dropout_pred:
-    \\n
+    \n
 # RNN loss hyperparameter:
     mse_reconstruction_reduction:
     mse_prediction_reduction:
@@ -117,7 +117,7 @@ def create_config_template():
     anneal_function:
     kl_start:
     annealtime:
-    \\n
+    \n
 # BORIS label prediction (vame.boris_to_numpy / vame.train_label_predictor):
     boris_path:
     boris_fps:
@@ -131,7 +131,7 @@ def create_config_template():
     label_cv:
     label_n_folds:
     label_ignore_background:
-    \\n
+    \n
 # Legacy mode
     legacy: 
     """
